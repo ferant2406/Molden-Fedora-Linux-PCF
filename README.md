@@ -37,13 +37,13 @@ $ ./bin/gmolden
 ```
 - Además, puedes copiar los archivos a un directorio de `PATH` para ejecutar `molden` en cualquier momento
 ```
-$ cp bin/molden /usr/local/bin/
-$ cp bin/gmolden /usr/local/bin/
+$ cp -v bin/molden /usr/local/bin/
+$ cp -v bin/gmolden /usr/local/bin/
 ```
 - También puedes crear un directorio nuevo y añadirlo a `PATH`
 ```
 $ mkdir -pv ~/.local/bin/
-$ cp bin/molden ~/.local/bin/
-$ cp bin/gmolden ~/.local/bin/
+$ cp -v bin/molden ~/.local/bin/
+$ cp -v bin/gmolden ~/.local/bin/
 $ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
