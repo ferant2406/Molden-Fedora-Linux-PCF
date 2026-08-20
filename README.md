@@ -11,7 +11,7 @@ $ sudo dnf install gcc-gfortran libX11 libX11-devel mesa-libGL mesa-libGL-devel 
 ```
 En Ubuntu:
 ```
-$ sudo apt-get install gfortran libX11-6 libX11-dev libgl1-mesa-glx libgl1-mesa-dev build-essential mesa-common-dev libglu1-mesa-dev libxmu-dev makedepend or xutils-dev wget
+$ sudo apt-get install gfortran libX11-6 libX11-dev libgl1-mesa-glx libgl1-mesa-dev build-essential mesa-common-dev libglu1-mesa-dev libxmu-dev makedepend xutils-dev wget
 ```
 - Descarga `molden` y extrae el archivo
 ```
