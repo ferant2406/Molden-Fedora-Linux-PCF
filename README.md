@@ -40,10 +40,15 @@ $ ./bin/gmolden
 $ sudo cp -v bin/molden /usr/local/bin/
 $ sudo cp -v bin/gmolden /usr/local/bin/
 ```
-- También puedes crear un directorio nuevo y añadirlo a `PATH`
+- También puedes crear un directorio en `home`
 ```
 $ mkdir -pv ~/.local/bin/
 $ cp -v bin/molden ~/.local/bin/
 $ cp -v bin/gmolden ~/.local/bin/
-$ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
+- Si tu directorio `~/.local/bin/` no está en tu directorio, lo puedes agregar 
+```
+$ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+$ source ~/.bashrc
+```
+Instrucciones basadas en este [post](https://www.reddit.com/r/comp_chem/comments/v7865d/tutorial_compiling_molden_from_source_on_debian/) y las [instrucciones](https://www.theochem.ru.nl/molden/linux.html) de `molden`.
