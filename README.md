@@ -40,7 +40,7 @@ $ ./bin/gmolden
 $ cp bin/molden /usr/local/bin/
 $ cp bin/gmolden /usr/local/bin/
 ```
-- También puedes crear un directorio nuevo.
+- También puedes crear un directorio nuevo y añadirlo a `PATH`
 ```
 $ mkdir -pv ~/.local/bin/
 $ cp bin/molden ~/.local/bin/
