@@ -1,3 +1,7 @@
-Molden-Fedora-Linux-PCF
+Compilar Molden en Linux
 ========================
-Instrucciones para compilar Molden en Fedora Linux. Esto es una prueba
+
+Instrucciones para compilar `molden` en Linux (Fedora y Ubuntu).
+
+- Instalar dependencias
+- Descargar `molden`
