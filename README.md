@@ -1,7 +1,7 @@
 Compilar Molden en Linux
 ========================
 
-Instrucciones para compilar `molden` en Linux (Fedora y Ubuntu).
+Instrucciones para compilar `molden` en Linux (Fedora 44). Estas instrucciones también deberían funcionar en otras distribuciones (Ubuntu, etc).
 
 - Instala las dependencias
 
@@ -37,8 +37,8 @@ $ ./bin/gmolden
 ```
 - Además, puedes copiar los archivos a un directorio de `PATH` para ejecutar `molden` en cualquier momento
 ```
-$ cp -v bin/molden /usr/local/bin/
-$ cp -v bin/gmolden /usr/local/bin/
+$ sudo cp -v bin/molden /usr/local/bin/
+$ sudo cp -v bin/gmolden /usr/local/bin/
 ```
 - También puedes crear un directorio nuevo y añadirlo a `PATH`
 ```
