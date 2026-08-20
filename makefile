@@ -108,22 +108,22 @@ ifneq ($(comgcc), $(empty))
    EXT = ${EXTRAZ}
 endif
 #FFLAGS = -g ${AFLAG}
-FFLAGS += -g ${AFLAG} -O2 -malign-double -fomit-frame-pointer -funroll-loops -w -fallow-argument-mismatch
+FFLAGS += -g ${AFLAG} -w -fallow-argument-mismatch
 LIBS =  -L/usr/X11R6/lib -lX11 -lm
 ifeq ($(AFLAG),"-m64")
 LIBS =  -L/usr/X11R6/lib64 -lX11 -lm
 endif
 LDR = ${FC} -g ${AFLAG}
-CFLAGS = ${AFLAG} ${EXTRAZ} -c -g -I/usr/X11R6/include -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0 -O2 -malign-double -fomit-frame-pointer -funroll-loops
+CFLAGS = ${AFLAG} ${EXTRAZ} -c -g -I/usr/X11R6/include -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0
  ifeq ($(os), Debian)
-    CFLAGS = ${AFLAG} ${EXTRAZ} -c -I/usr/include/X11 -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0 -O2 -malign-double -fomit-frame-pointer -funroll-loops
+    CFLAGS = ${AFLAG} ${EXTRAZ} -c -I/usr/include/X11 -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0
     LIBS =  -L/usr/lib/X11 -lX11 -lm
     ifeq ($(AFLAG),"-m64")
        LIBS =  -L/usr/X11R6/lib64 -lX11 -lm
     endif
  endif
 ifeq ($(os), FreeBSD)
-CFLAGS = ${CFLAGS} -DFREEBSD -O2 -malign-double -fomit-frame-pointer -funroll-loops
+CFLAGS = ${CFLAGS} -DFREEBSD
 endif
 endif
 
@@ -132,11 +132,11 @@ ifeq ($(uname), Darwin)
 # Mac OS X g77
 #
 CC=cc
-FFLAGS+=-O3 -funroll-loops -DDARWIN ${EXTRAZ} -O2 -malign-double -fomit-frame-pointer -funroll-loops -w -fallow-argument-mismatch
+FFLAGS+=-O3 -funroll-loops -DDARWIN ${EXTRAZ} -w -fallow-argument-mismatch
 LIBS = -L/usr/X11R6/lib -lX11 -lm
 LIBSG = -L/usr/X11R6/lib -lGLU "-Wl,-dylib_file,/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib" -lGL -lXmu -lX11 -lm
 EXT= -std=gnu89 -Wno-return-type -DDARWIN ${EXTRAZ}
-CFLAGS= -g -std=gnu90 -Wno-return-type -DDARWIN -I/usr/X11R6/include -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0 -Wno-logical-op-parentheses -Wno-tautological-pointer-compare -Wno-tautological-constant-out-of-range-compare -O2 -malign-double -fomit-frame-pointer -funroll-loops
+CFLAGS= -g -std=gnu90 -Wno-return-type -DDARWIN -I/usr/X11R6/include -DDOBACK -DHASTIMER -DCOLOR_OFFSET=0.0 -Wno-logical-op-parentheses -Wno-tautological-pointer-compare -Wno-tautological-constant-out-of-range-compare
 LDR = ${FC}
 endif
 
